@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
   public class PlayerController : MonoBehaviour
 
@@ -11,7 +12,7 @@ using UnityEngine;
     public Transform target;
     public float lerpSpeed = 1f;
 
-    static public float speed = 1f;
+    static public float speed = 2f;
     public string tagToChecKEnemy = "Enemy";
     public string tagToChecKEndLine = "EndLine";
 
@@ -34,6 +35,9 @@ using UnityEngine;
    // }
 
       public PlayerController Invencible;
+
+      [Header("Animation")]
+      public AnimatorManger animatorManager;
      
      
       void Update()
@@ -52,7 +56,11 @@ using UnityEngine;
     {
         if (collision.transform.tag == tagToChecKEnemy)
         {
-            if(!invencible) EndGame();
+           MoveBack();
+            if(!invencible) 
+            {
+            EndGame(AnimatorManger.AnimationType.DEAD);
+            }
         }      
     }
 
@@ -64,15 +72,22 @@ using UnityEngine;
         }
     }
 
-    private void EndGame()
+    private void MoveBack()
+   {
+        transform.DOMoveZ(-1f, .3f).SetRelative();
+   }
+
+    private void EndGame(AnimatorManger.AnimationType animationType = AnimatorManger.AnimationType.IDLE)
     {
          _canRun = false;
          endScreen.SetActive(true);
+         animatorManager.Play(animationType);
     }
 
     public void StartRun()
     {
         _canRun = true;
+        animatorManager.Play(AnimatorManger.AnimationType.RUN);
     }
 
    static public void SetInvencible() 
