@@ -11,6 +11,9 @@ using UnityEngine;
     public float timeToHide = 3;
     public GameObject graphicItem;
 
+    public PlayerController playerController; // BounceHelper
+
+    
     public void Awake()
     {
         if (particleSystem != null) particleSystem.transform.SetParent(null);
@@ -24,11 +27,13 @@ using UnityEngine;
        }
     }
 
-    protected virtual void Collect()
+   // protected virtual void Collect()
+      public void Collect()
     {
         if (graphicItem != null) graphicItem.SetActive(false);
         Invoke("HideObject", timeToHide);
-        OnCollect();        
+        OnCollect();
+        playerController.Bounce(); //BounceHelper       
     }  
 
     private void HideObject()
@@ -40,7 +45,11 @@ using UnityEngine;
     {
         if(particleSystem != null) particleSystem.Play();
         if (audioSource != null) audioSource.Play();
+      
+
     }
+
+
   
 }
 

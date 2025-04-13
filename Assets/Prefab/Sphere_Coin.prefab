@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8152631705741604188}
   - component: {fileID: 8152631705741604179}
   - component: {fileID: 8152631705741604178}
+  - component: {fileID: 6066089177134494402}
   m_Layer: 0
   m_Name: Sphere_Coin
   m_TagString: Untagged
@@ -142,3 +143,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f9962d22a82d142ae41189549d831b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6066089177134494402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152631705741604177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1afe2041886d644c819d19ced100d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  Delay: 1
+  ScaleBigger: 1.5

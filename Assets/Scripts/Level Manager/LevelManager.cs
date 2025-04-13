@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public Transform container;
+    public Transform container; // ok
 
     //public GameObject level;
     public List<GameObject> levels;
     
     [Header("Pieces")]
-    public List<LevelPieceBase> levelPieces;
-    public int piecesNumber = 5;
+    public List<LevelPieceBase> levelPieces; // ok
+    public int piecesNumber = 5; // ok
 
     [SerializeField] public int _index;
     private GameObject _currentLevel;
@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
     
     private void Awake()
     {
-        //SpawnNextLevel();
+        SpawnNextLevel();
         CreateLevelPieces();
     }
 

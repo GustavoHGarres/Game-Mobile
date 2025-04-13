@@ -36,6 +36,8 @@ using DG.Tweening;
 
       public PlayerController Invencible;
 
+      [SerializeField] private BounceHelper _bounceHelper;  // DOTeween do Player 
+
       [Header("Animation")]
       public AnimatorManger animatorManager;
      
@@ -88,12 +90,23 @@ using DG.Tweening;
     {
         _canRun = true;
         animatorManager.Play(AnimatorManger.AnimationType.RUN);
+        
     }
 
    static public void SetInvencible() 
     {     
         invencible = true;
     }
+
+
+
+   // DOTeween do Player
+   public void Bounce()
+   {
+    if(_bounceHelper != null)
+    _bounceHelper.Bounce();
+   }
+
 
     
    // protected virtual void SpawnObject()
