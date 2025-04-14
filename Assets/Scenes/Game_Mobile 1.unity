@@ -251,7 +251,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483145827}
-  - component: {fileID: 483145826}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -259,28 +258,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &483145826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483145825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bf5f9433ee0eff46bd5a8e51eef9a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  container: {fileID: 1465768476}
-  levels:
-  - {fileID: 3847758441287544887, guid: 9076977769620f64f8d25c95a088ae10, type: 3}
-  - {fileID: 9147000748017927950, guid: cdb0c96b40fd5784da6ebfab2bfbf8b3, type: 3}
-  - {fileID: 9147000748017927950, guid: 5bebef0f54a4b11409f9524b6f1833c1, type: 3}
-  levelPieces:
-  - {fileID: 4518232223962538194, guid: c04acc535bfd1ff429ad3e6d880853a6, type: 3}
-  - {fileID: 5756709438419781411, guid: da8f01206747aa5498cf8f8c2864f85b, type: 3}
-  piecesNumber: 0
-  _index: 0
 --- !u!4 &483145827
 Transform:
   m_ObjectHideFlags: 0
